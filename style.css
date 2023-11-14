@@ -14,6 +14,9 @@ body {
     border-bottom: solid 1px black;
     gap: 10px;
     align-items: center;
+    position:sticky;
+    top:0;
+    background-color: white;
 
 }
 
@@ -35,6 +38,7 @@ body {
     border: none;
     width: 100%;
     font-size: 15px;
+    background-color: transparent;
 }
 
 .nav-section2 input:focus {
@@ -46,6 +50,24 @@ body {
     gap: 10px;
     align-items: center;
 }
+
+.my-learning__purchase{
+    border: solid 1px black;
+    padding: 10px;
+    width: 100px;
+    position:absolute;
+    display: none;
+    background-color: white;
+    top:25px;
+    right: 0;
+}.my-learning{
+    position: relative;
+    cursor: pointer;
+}
+.my-learning:hover .my-learning__purchase{
+    display: block;
+}
+
 
 .categories {
     border: solid 1px black;
@@ -66,6 +88,19 @@ body {
 
 .sale-image img {
     width: 100%;
+}
+.sale-image{
+    position: relative;
+}
+.sale-offer{
+    border: 1px solid black;
+    padding: 15px;
+    width: fit-content;
+    position: absolute;
+    top:25%;
+    left: 15%;
+    background-color: white;
+
 }
 
 .recommended-section2__courses img,.course-card img {
