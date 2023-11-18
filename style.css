@@ -17,9 +17,12 @@ body {
     position:sticky;
     top:0;
     background-color: white;
+    z-index: 100;
 
 }
-
+.nav-section4{
+    display: none;
+}
 .nav-section1__title {
     color: #A435F0;
 }
@@ -97,9 +100,13 @@ body {
 
 .sale-image img {
     width: 100%;
+    
 }
+
 .sale-image{
     position: relative;
+    /* flex-grow: 1;
+    flex-basis: 20%; */
 }
 .sale-offer{
     border: 1px solid black;
@@ -127,8 +134,10 @@ body {
 }
 
 .recommended-section2__courses img,.course-card img {
-    height: 200px;
+    height: 200px; 
     width: 300px;
+    flex-grow: 1;
+    flex-basis: 20%;
 }
 
 .recommended,.popular {
@@ -188,4 +197,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+/* media queries */
+@media screen and (max-width:800px) {
+    body{
+        font-size: 10px;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Reset flex properties to stack items vertically */
+    .recommended-section2__courses img,
+    .course-card img{
+        width: 100%;
+        flex-grow: 1;
+        flex-basis: 100%; /* Set basis to 100% for full width stacking */
+        padding: 10px;
+    }
+
+    .categories,.nav-section2,.nav-section3{
+        display: none;
+    }
+    .nav-section4{
+        display: block;
+    }
 }
